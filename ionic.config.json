@@ -1,0 +1,7 @@
+{
+  "name": "rollforinitiative",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
