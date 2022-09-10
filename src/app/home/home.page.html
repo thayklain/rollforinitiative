@@ -1,20 +1,42 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
+    <img src="../../assets/d20 red.png" class="logo" width="50"/>
     <ion-title>
-      Blank
+      Roll For Initiative
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+      <h1 class="turn"><b>Turn</b></h1>
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>AC</th>
+        <th>HP</th>
+        <th>MP</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class= "data" *ngFor="let item of turn.characters">
+        <td>{{item.name}}</td>
+        <td>{{item.ac}}</td>
+        <td>{{item.hp}}</td>
+        <td>{{item.mp}}</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-button [routerLink]="['/turn']" color="danger">Add Character</ion-button>
+      <ion-button [routerLink]="['/removechar']" color="danger">Remove Character</ion-button>
 </ion-content>
+
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <img src="../../assets/espada cinza.png" class="sword" width="45"/>
+      <a [routerLink]="['/rules']">
+      <img src="../../assets/livro branco.png" class="book" width="90"/>
+    </a>
+    </ion-toolbar>
+  </ion-footer>

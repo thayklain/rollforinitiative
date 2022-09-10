@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Turn } from 'src/model/structure';
+import { SystemService } from './system.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+  turn: Turn;
+
+  constructor(private service: SystemService) {
+    this.turn = this.service.turn;
+  }
 }
