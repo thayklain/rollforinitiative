@@ -86,7 +86,7 @@ h2, h3, h4, h5 {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
-input, textarea, button, select, label {
+input, textarea, select, label {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 1.2em;
@@ -136,13 +136,6 @@ ion-button {
   margin-right: 10px;
   margin-bottom: 20px;
   margin-top: 30px;
-}
-
-.logo {
-  padding-left: 15px;
-  padding-right: 10px;
-  padding-top: 10px;
-    float: left;
 }
 
 .add {

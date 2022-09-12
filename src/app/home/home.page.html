@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
     <img src="../../assets/d20 red.png" class="logo" width="50"/>
-    <ion-title>
+    <ion-title class="roll">
       Roll For Initiative
     </ion-title>
   </ion-toolbar>
@@ -9,28 +9,29 @@
 
 <ion-content>
       <h1 class="turn"><b>Turn</b></h1>
-  <table class="u-full-width">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>AC</th>
-        <th>HP</th>
-        <th>MP</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class= "data" *ngFor="let item of turn.characters">
-        <td>{{item.name}}</td>
-        <td>{{item.ac}}</td>
-        <td>{{item.hp}}</td>
-        <td>{{item.mp}}</td>
-      </tr>
-    </tbody>
-  </table>
 
-      <ion-button [routerLink]="['/turn']" color="danger">Add Character</ion-button>
-      <ion-button [routerLink]="['/removechar']" color="danger">Remove Character</ion-button>
-</ion-content>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>AC</th>
+            <th>HP</th>
+            <th>MP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class= "data" *ngFor="let item of turn.characters">
+            <td>{{item.name}}</td>
+            <td>{{item.ac}}</td>
+            <td>{{item.hp}}</td>
+            <td>{{item.mp}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <ion-button [routerLink]="['/addchar']" color="danger" class="add">Add</ion-button>
+      <ion-button [routerLink]="['/removechar']" color="danger" class="cancel">Remove</ion-button>
+      <ion-button [routerLink]="['/edit']" color="danger" >Edit</ion-button>
+    </ion-content>
 
   <ion-footer>
     <ion-toolbar color="dark">

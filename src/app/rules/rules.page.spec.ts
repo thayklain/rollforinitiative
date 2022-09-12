@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { RemovecharComponent } from './removechar.component';
+import { RulesPage } from './rules.page';
 
-describe('RemovecharComponent', () => {
-  let component: RemovecharComponent;
-  let fixture: ComponentFixture<RemovecharComponent>;
+describe('RulesPage', () => {
+  let component: RulesPage;
+  let fixture: ComponentFixture<RulesPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ RemovecharComponent ],
+      declarations: [ RulesPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(RemovecharComponent);
+    fixture = TestBed.createComponent(RulesPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

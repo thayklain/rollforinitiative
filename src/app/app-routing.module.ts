@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { RemovecharComponent } from './removechar/removechar.component';
-import { RulesComponent } from './rules/rules.component';
-import { TurnComponent } from './turn/turn.component';
 
 const routes: Routes = [
   {
@@ -14,10 +11,23 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'addchar',
+    loadChildren: () => import('./addchar/addchar.module').then( m => m.AddcharPageModule)
+  },
+  {
+    path: 'removechar',
+    loadChildren: () => import('./removechar/removechar.module').then( m => m.RemovecharPageModule)
+  },
+  {
+    path: 'rules',
+    loadChildren: () => import('./rules/rules.module').then( m => m.RulesPageModule)
+  },  {
+    path: 'edit',
+    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
+  },
 
-  { path: 'turn', component: TurnComponent },
-  { path: 'rules', component: RulesComponent },
-  { path: 'removechar', component: RemovecharComponent },
+
 ];
 
 @NgModule({

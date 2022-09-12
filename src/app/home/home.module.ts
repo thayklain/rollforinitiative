@@ -5,9 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { TurnComponent } from '../turn/turn.component';
-import { RulesComponent } from '../rules/rules.component';
-import { RemovecharComponent } from '../removechar/removechar.component';
 
 
 @NgModule({
@@ -15,8 +12,8 @@ import { RemovecharComponent } from '../removechar/removechar.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage, TurnComponent, RulesComponent, RemovecharComponent]
+  declarations: [HomePage]
 })
 export class HomePageModule {}

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Turn } from 'src/model/structure';
+import { Character, Turn } from 'src/model/structure';
 import { SystemService } from '../system.service';
 
 @Component({
@@ -10,9 +10,18 @@ import { SystemService } from '../system.service';
 export class HomePage {
 
   turn: Turn;
+  name: string;
+  charSelected: Character;
 
   constructor(private service: SystemService) {
     this.turn = this.service.turn;
   }
 
-}
+  exterminate(): void {
+    this.service.removeChar(this.name);
+  }
+
+  refresh(): void {
+    window.location.reload();
+  }
+};

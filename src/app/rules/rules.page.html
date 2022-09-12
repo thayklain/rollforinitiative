@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title color="light">Rules</ion-title>
+    <img src="../../assets/d20 red.png" class="logo" width="50"/>
+    <ion-title class="roll">
+      Roll For Initiative
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,9 +11,9 @@
   <ion-button color="danger">Combat</ion-button>
   <ion-button color="danger">Conditions</ion-button>
   <ion-button color="danger">Types pf Demage</ion-button>
-  <ion-button color="danger">Monsters</ion-button>
+  <ion-button color="danger" >Monsters</ion-button>
 
-<ion-item>Data will be presented here...</ion-item>
+<ion-item *ngFor="let item of data">{{item}}</ion-item>
 
 </ion-content>
 
