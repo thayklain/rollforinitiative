@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <img src="../../assets/d20 red.png" class="logo" width="50"/>
+    <ion-title class="roll">
+      Roll For Initiative
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <table class="u-full-width">
+    <thead>
+      <tr>
+        <th>Turn Order</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class= "data" *ngFor="let item of turn.characters">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Insert old place in turn</ion-label>
+    <ion-input placeholder="Add number" [(ngModel)]="oldIndex" name="txoldindex"></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Insert new place in turn</ion-label>
+    <ion-input placeholder="Add number" [(ngModel)]="newIndex" name="txnewindex"></ion-input>
+  </ion-item>
+
+  <ion-button class="add" type="submit" color="danger" (click)="orderChar()">Save</ion-button>
+  <ion-button class="cancel" [routerLink]="['/home']" color="danger">Cancel</ion-button>
+  </ion-content>
+
+  <ion-footer>
+         <ion-toolbar color="dark">
+           <a [routerLink]="['/home']">
+             <img src="../../assets/espada branca.png" class="sword" width="45"/>
+           </a>
+           <a [routerLink]="['/rules']">
+                <img src="../../assets/livro branco.png" class="book" width="90"/>
+           </a>
+         </ion-toolbar>
+  </ion-footer>

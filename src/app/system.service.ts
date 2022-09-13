@@ -43,6 +43,14 @@ editChar(editChar: string, newName: string, newAc: number, newHp: number, newMp:
   };
 }   
 
+orderChar(oldIndex: number, newIndex: number){
+  oldIndex--;
+  newIndex--;
+
+  const element = this.turn.characters.splice(oldIndex, 1)[0];
+  this.turn.characters.splice(newIndex, 0, element);
+}
+
 getMonsters() {
   return this.httpClient.get('https://www.dnd5eapi.co/api/conditions/blinded');
 };

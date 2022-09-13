@@ -11,7 +11,6 @@ export class HomePage {
 
   turn: Turn;
   name: string;
-  charSelected: Character;
 
   constructor(private service: SystemService) {
     this.turn = this.service.turn;
